@@ -7,5 +7,5 @@ for line in urllib2.urlopen("http://86.59.21.38/tor/status-vote/current/consensu
     ipAddress = re.findall(r"[0-9]+(?:\.[0-9]+){3}", line)
     #print ipAddress
     print type(ipAddress)
-    f.write(string(ipAddress))
+    f.write(str(ipAddress))
 f.close()
