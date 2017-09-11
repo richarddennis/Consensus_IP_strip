@@ -9,5 +9,8 @@ for line in urllib2.urlopen("http://86.59.21.38/tor/status-vote/current/consensu
     #print type(ipAddress)
     f.write(str(ipAddress))
     f.write("\n")
-f.write(f.read().replace("[","").replace("]",""))
+f.close()
+
+f = open("relays.txt", "w+")
+f.write(f.read().replace("[","").replace("]","").replace(",",""))
 f.close()
